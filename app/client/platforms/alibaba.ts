@@ -12,6 +12,7 @@ import {
   getHeaders,
   LLMApi,
   LLMModel,
+  SpeechOptions,
   MultimodalContent,
 } from "../api";
 import Locale from "../../locales";
@@ -21,7 +22,7 @@ import {
 } from "@fortaine/fetch-event-source";
 import { prettyObject } from "@/app/utils/format";
 import { getClientConfig } from "@/app/config/client";
-import { getMessageTextContent, isVisionModel } from "@/app/utils";
+import { getMessageTextContent } from "@/app/utils";
 
 export interface OpenAIListModelResponse {
   object: string;
@@ -81,6 +82,10 @@ export class QwenApi implements LLMApi {
 
   extractMessage(res: any) {
     return res?.output?.choices?.at(0)?.message?.content ?? "";
+  }
+
+  speech(options: SpeechOptions): Promise<ArrayBuffer> {
+    throw new Error("Method not implemented.");
   }
 
   async chat(options: ChatOptions) {
