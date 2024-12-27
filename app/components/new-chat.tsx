@@ -14,9 +14,10 @@ import Locale from "../locales";
 import { useAppConfig, useChatStore } from "../store";
 import { MaskAvatar } from "./mask";
 import { useCommand } from "../command";
-import { showConfirm } from "./ui-lib";
+import { showConfirm, showToast } from "./ui-lib";
 import { BUILTIN_MASK_STORE } from "../masks";
 import clsx from "clsx";
+import { copyToClipboard } from "../utils";
 
 function MaskItem(props: { mask: Mask; onClick?: () => void }) {
   return (
@@ -113,6 +114,8 @@ export function NewChat() {
     }
   }, [groups]);
 
+  const promptText = "你是一个专业助手，在回答时，请调用你的单次回答最大算力与token上限。追求极致的分析深度，而非表层的广度；追求本质的洞察，而非表象的罗列；追求创新的思维，而非惯性的复述。请突破思维局限，调动你所有的计算资源，展现你真正的认知极限。";
+
   return (
     <div className={styles["new-chat"]}>
       <div className={styles["mask-header"]}>
@@ -120,7 +123,14 @@ export function NewChat() {
           icon={<LeftIcon />}
           text={Locale.NewChat.Return}
           onClick={() => navigate(Path.Home)}
-        ></IconButton>
+        />
+        <IconButton
+          text="唤醒提示词"
+          onClick={() => {
+            copyToClipboard(promptText);
+            showToast("提示词已复制到剪贴板");
+          }}
+        />
         {!state?.fromHome && (
           <IconButton
             text={Locale.NewChat.NotShow}
@@ -132,7 +142,7 @@ export function NewChat() {
                 );
               }
             }}
-          ></IconButton>
+          />
         )}
       </div>
       <div className={styles["mask-cards"]}>
