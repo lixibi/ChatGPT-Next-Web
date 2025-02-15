@@ -259,7 +259,7 @@ export function SideBar(props: { className?: string }) {
               rel="noopener noreferrer"
               style={{ color: 'inherit', textDecoration: 'none' }}
             >
-              个人主页
+              🏠 个人主页
             </a>
             <div style={{ margin: '4px 0' }}>
               <a 
@@ -268,7 +268,7 @@ export function SideBar(props: { className?: string }) {
                 rel="noopener noreferrer"
                 style={{ color: 'inherit', textDecoration: 'none' }}
               >
-               工具1：AI文本处理助手
+               📝 工具1：AI文本处理助手
               </a>
             </div>
             <div style={{ margin: '4px 0' }}>
@@ -278,7 +278,7 @@ export function SideBar(props: { className?: string }) {
                 rel="noopener noreferrer"
                 style={{ color: 'inherit', textDecoration: 'none' }}
               >
-                工具2：道长AI
+                ☯️ 工具2：道长AI
               </a>
             </div>
             <div style={{ margin: '4px 0' }}>
@@ -288,7 +288,7 @@ export function SideBar(props: { className?: string }) {
                 rel="noopener noreferrer"
                 style={{ color: 'inherit', textDecoration: 'none' }}
               >
-                工具3：TT
+                👧 工具3：TT
               </a>
             </div>
             <div style={{ margin: '4px 0' }}>
@@ -298,10 +298,10 @@ export function SideBar(props: { className?: string }) {
                 rel="noopener noreferrer"
                 style={{ color: 'inherit', textDecoration: 'none' }}
               >
-                工具4：智慧台站助手
+                📡 工具4：智慧台站助手
               </a>
             </div>
-            <div>thx for nextchat</div>
+            <div>✨ thx for nextchat</div>
           </>
         }
         logo={<ChatGptIcon />}
