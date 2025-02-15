@@ -254,15 +254,54 @@ export function SideBar(props: { className?: string }) {
         subTitle={
           <>
             <a 
-              href="http://s.lixining.com:3399/" 
+              href="https://www.lixining.com" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ color: 'inherit', textDecoration: 'none' }}
             >
-             工具1：AI文本处理助手
+              个人主页
             </a>
+            <div style={{ margin: '4px 0' }}>
+              <a 
+                href="http://s.lixining.com:3399/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: 'inherit', textDecoration: 'none' }}
+              >
+               工具1：AI文本处理助手
+              </a>
+            </div>
+            <div style={{ margin: '4px 0' }}>
+              <a 
+                href="https://dao.lixining.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: 'inherit', textDecoration: 'none' }}
+              >
+                工具2：道长AI
+              </a>
+            </div>
+            <div style={{ margin: '4px 0' }}>
+              <a 
+                href="https://tt.lixining.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: 'inherit', textDecoration: 'none' }}
+              >
+                工具3：TT
+              </a>
+            </div>
+            <div style={{ margin: '4px 0' }}>
+              <a 
+                href="http://fst.lixining.com:8888/ai-assistant" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: 'inherit', textDecoration: 'none' }}
+              >
+                工具4：智慧台站助手
+              </a>
+            </div>
             <div>thx for nextchat</div>
-          
           </>
         }
         logo={<ChatGptIcon />}
