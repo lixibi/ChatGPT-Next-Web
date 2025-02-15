@@ -253,15 +253,16 @@ export function SideBar(props: { className?: string }) {
         title="李喜碧AI hub"
         subTitle={
           <>
-            <div>thx for nextchat</div>
             <a 
               href="http://s.lixining.com:3399/" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ color: 'inherit', textDecoration: 'none' }}
             >
-              AI文本处理助手
+             工具1：AI文本处理助手
             </a>
+            <div>thx for nextchat</div>
+          
           </>
         }
         logo={<ChatGptIcon />}
